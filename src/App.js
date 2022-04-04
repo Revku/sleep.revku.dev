@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import MainTemplate from 'templates/MainTemplate/MainTemplate'
-import revkulogo from 'assets/images/revku-logo.svg'
 import sleeplogo from 'assets/images/sleep-logo.svg'
 
 import Home from 'views/Home/Home'
 import BedTime from 'views/BedTime/BedTime'
+import Footer from 'components/Footer/Footer'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -34,7 +34,7 @@ const App = () => {
           : <h1>Result Wake Up Time</h1>}
         </div>
         <div>
-          Powered by <img src={revkulogo} />
+          <Footer />
         </div>
       </Wrapper>
     </MainTemplate>

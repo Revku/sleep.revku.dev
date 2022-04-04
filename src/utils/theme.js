@@ -11,6 +11,7 @@ export const theme = {
         family: "'Montserrat', sans-serif",
         weight: {
             regular: 400,
+            semibold: 600,
             bold: 700,
             extrabold: 800,
         },

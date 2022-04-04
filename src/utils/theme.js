@@ -5,12 +5,14 @@ export const theme = {
         secondary: "#383763",
         button: "#463396",
         text: "#fff",
+        boxBackground: "#1E1D37",
     },
     font: {
-        family: "'Open Sans', sans-serif",
+        family: "'Montserrat', sans-serif",
         weight: {
             regular: 400,
             bold: 700,
+            extrabold: 800,
         },
     },
 }

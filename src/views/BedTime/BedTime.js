@@ -5,15 +5,8 @@ import styled from 'styled-components';
 import Box from 'components/Box/Box'
 import Heading from 'components/Heading/Heading'
 import Paragraph from 'components/Paragraph/Paragraph'
-import Item from 'components/Item/Item'
 import Button from 'components/Button/Button'
-
-const Times = styled.div`
-    width: 85%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-`;
+import Times from 'components/Times/Times'
 
 const BedTime = ({time, setPage}) => {
     let bedTime = DateTime.fromISO(time).setLocale('pl-PL').setZone('Europe/Warsaw');
@@ -30,13 +23,7 @@ const BedTime = ({time, setPage}) => {
             <Heading>PORA SNU</Heading>
             <Paragraph>Człowiek potrzebuje około 15 minut aby zasnąć. Żeby obudzić się o 6:30, musisz położyć się spać o wybranych godzinach:</Paragraph>
 
-            <Times>
-                {times.map((time, index) => {
-                    return (
-                        <Item key={index}>{time}</Item>
-                    )  
-                })}
-            </Times>
+            <Times times={times} />
 
             <Paragraph>Jeśli obudzisz się w jednym z tych momentów, wstaniesz między 90-minutowymi cyklami snu. Dobry sen składa się z 5-6 pełnych cykli snu.</Paragraph>
 

@@ -23,7 +23,7 @@ const BedTime = ({time, setPage}) => {
     return (
         <Box>
             <Heading>CZAS SNU</Heading>
-            <Paragraph>Człowiek potrzebuje około 15 minut aby zasnąć. Żeby obudzić się o 6:30, musisz położyć się spać o wybranych godzinach:</Paragraph>
+            <Paragraph>Człowiek potrzebuje około 15 minut aby zasnąć. Żeby obudzić się o {time}, musisz położyć się spać o wybranych godzinach:</Paragraph>
 
             <Times times={times} />
 

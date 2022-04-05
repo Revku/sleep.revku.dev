@@ -12,9 +12,11 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 650px) {
+    @media (max-width: 800px) {
       border-radius: 0;
       padding: 50px 20px;
+      border-bottom: 1px solid gray;
+      margin-bottom: 15px;
     }
 `;
 

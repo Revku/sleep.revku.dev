@@ -16,6 +16,10 @@ const Wrapper = styled.div`
   justify-content: space-around;
 `;
 
+const Logo = styled.img`
+  padding: 20px 0;
+`;
+
 const App = () => {
   const [page, setPage] = useState('home');
   const [time, setTime] = useState('00:00');
@@ -24,7 +28,7 @@ const App = () => {
     <MainTemplate>
       <Wrapper>
         <div>
-          <img src={sleeplogo} />
+          <Logo src={sleeplogo} />
         </div>
         <div>
           {

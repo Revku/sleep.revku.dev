@@ -6,6 +6,10 @@ import revkulogo from 'assets/images/revku-logo.svg'
 const Wrapper = styled.div`
     font-weight: ${({ theme }) => theme.font.weight.semibold};
     padding: 20px 0;
+
+    @media (max-width: 800px) {
+      padding: 50px 0;
+    }
 `;
 
 const Logo = styled.img`

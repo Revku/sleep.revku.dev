@@ -35,16 +35,23 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
+const ErrorWrapper = styled.p`
+  padding: 15px 0;
+  color: red;
+`;
+
 const Field = styled.div`
   margin: 20px 0;
 `;
 
 const Home = ({setPage, setTime}) => {
   const [bedTime, setBedTime] = React.useState('');
+  const [errorMessage, setErrorMessage] = React.useState('');
 
   const submit = () => {
+    setErrorMessage('');
     if (!bedTime) {
-      alert('Na początku wpisz godzinę.');
+      setErrorMessage('Nie wpisano żadnej godziny!')
       return;
     } else {
       setTime(bedTime);
@@ -64,6 +71,7 @@ const Home = ({setPage, setTime}) => {
         </Field>
 
         <Button onclick={submit}>O której godzinie muszę iść spać?</Button>
+        <ErrorWrapper>{errorMessage}</ErrorWrapper>
       </Box>
       <Paragraph>Chcesz zasnąć teraz?</Paragraph>
       <Button onclick={() => setPage('wakeUpTime')}>O której godzinie muszę wstać?</Button>

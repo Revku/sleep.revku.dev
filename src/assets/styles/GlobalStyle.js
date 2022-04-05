@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
         background: ${({ theme }) => theme.colors.background};
         color: ${({ theme }) => theme.colors.text};
         width: 100%;
-        min-height: 100vh;
 
         @media (max-width: 800px) {
             background: ${({ theme }) => theme.colors.boxBackground};

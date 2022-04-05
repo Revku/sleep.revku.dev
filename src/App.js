@@ -9,7 +9,7 @@ import WakeUpTime from 'views/WakeUpTime/WakeUpTime'
 import Footer from 'components/Footer/Footer'
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +18,10 @@ const Wrapper = styled.div`
 
 const Logo = styled.img`
   padding: 20px 0;
+
+  @media (max-width: 800px) {
+    padding: 50px 0;
+  }
 `;
 
 const App = () => {

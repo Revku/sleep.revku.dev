@@ -5,6 +5,7 @@ import sleeplogo from 'assets/images/sleep-logo.svg'
 
 import Home from 'views/Home/Home'
 import BedTime from 'views/BedTime/BedTime'
+import WakeUpTime from 'views/WakeUpTime/WakeUpTime'
 import Footer from 'components/Footer/Footer'
 
 const Wrapper = styled.div`
@@ -31,7 +32,7 @@ const App = () => {
           ? <Home setPage={setPage} setTime={setTime} /> 
           : page === 'resultbedtime' 
           ? <BedTime time={time} setPage={setPage} /> 
-          : <h1>Result Wake Up Time</h1>}
+          : <WakeUpTime setPage={setPage} />}
         </div>
         <div>
           <Footer />

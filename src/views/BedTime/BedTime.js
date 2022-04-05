@@ -17,15 +17,17 @@ const BedTime = ({time, setPage}) => {
         bedTime = bedTime.minus({minutes: 90});
         times.push(bedTime.toFormat('HH:mm'));
     }
+
+    times.reverse();
     
     return (
         <Box>
-            <Heading>PORA SNU</Heading>
+            <Heading>CZAS SNU</Heading>
             <Paragraph>Człowiek potrzebuje około 15 minut aby zasnąć. Żeby obudzić się o 6:30, musisz położyć się spać o wybranych godzinach:</Paragraph>
 
             <Times times={times} />
 
-            <Paragraph>Jeśli obudzisz się w jednym z tych momentów, wstaniesz między 90-minutowymi cyklami snu. Dobry sen składa się z 5-6 pełnych cykli snu.</Paragraph>
+            <Paragraph>Jeśli pójdziesz spać w jednym z tych momentów, wstaniesz między 90-minutowymi cyklami snu. Dobry sen składa się z 5-6 pełnych cykli snu.</Paragraph>
 
             <Button onclick={() => setPage('home')}>Powrót do strony głównej</Button>
         </Box>

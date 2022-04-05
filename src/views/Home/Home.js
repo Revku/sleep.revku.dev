@@ -66,7 +66,7 @@ const Home = ({setPage, setTime}) => {
         <Button onclick={submit}>O której godzinie muszę iść spać?</Button>
       </Box>
       <Paragraph>Chcesz zasnąć teraz?</Paragraph>
-      <Button>O której godzinie muszę wstać?</Button>
+      <Button onclick={() => setPage('wakeUpTime')}>O której godzinie muszę wstać?</Button>
     </Wrapper>
   )
 }

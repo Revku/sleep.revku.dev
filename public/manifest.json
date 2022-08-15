@@ -1,6 +1,6 @@
 {
   "short_name": "Kalkulator Snu",
-  "name": "Aplikacja, która obliczy, o której godzinie musisz położyć się spać, aby wstać odpowiednio z cyklami snu.",
+  "name": "Sleep Calculator",
   "icons": [
     {
       "src": "favicon.ico",

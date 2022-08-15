@@ -1,10 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 
-import ReactGA from 'react-ga';
-const TRACKING_ID = "G-TYJMDKVP00";
-ReactGA.initialize(TRACKING_ID);
-
 import MainTemplate from 'templates/MainTemplate/MainTemplate'
 import sleeplogo from 'assets/images/sleep-logo.svg'
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { DateTime } from "luxon";
-import styled from 'styled-components';
 
 import Box from 'components/Box/Box'
 import Heading from 'components/Heading/Heading'
@@ -11,11 +10,16 @@ import Times from 'components/Times/Times'
 const WakeUpTime = ({ setPage }) => {
     let wakeTime = DateTime.now().setLocale('pl-PL').setZone('Europe/Warsaw');
     let times = [];
+    let cycles = 0;
     wakeTime = wakeTime.plus({minutes: 15});
     
     for (let i = 0; i < 6; i++) {
         wakeTime = wakeTime.plus({minutes: 90});
-        times.push(wakeTime.toFormat('HH:mm'));
+        cycles++;
+        times.push({
+            time: wakeTime.toFormat('HH:mm'),
+            cycles: cycles
+        });
     }
 
     times.reverse();

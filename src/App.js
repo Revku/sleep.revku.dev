@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import 'react-tooltip/dist/react-tooltip.css'
 
 import MainTemplate from 'templates/MainTemplate/MainTemplate'
 import sleeplogo from 'assets/images/sleep-logo.svg'

@@ -15,7 +15,7 @@ const Times = ({times}) => {
     <Wrapper>
         {times.map((time, index) => {
             return (
-                <Item key={index}>{time}</Item>
+                <Item key={index} cycles={time.cycles}>{time.time}</Item>
             )
         })}
     </Wrapper>

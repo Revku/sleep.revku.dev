@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tooltip } from 'react-tooltip';
 import styled from 'styled-components'
 
 const StyledItem = styled.div`
@@ -16,9 +17,16 @@ const StyledItem = styled.div`
     }
 `;
 
-const Item = ({children}) => {
+const Item = ({children, cycles}) => {
   return (
-    <StyledItem>{children}</StyledItem>
+    <>
+      <Tooltip id={`tooltip-${cycles}`} />
+      <StyledItem
+        data-tooltip-id={`tooltip-${cycles}`}
+        data-tooltip-content={`Cykli snu: ${cycles}`}
+        data-tooltip-place="top"
+      >{children}</StyledItem>
+    </>
   )
 }
 

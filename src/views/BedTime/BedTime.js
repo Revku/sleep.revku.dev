@@ -1,6 +1,5 @@
 import React from 'react'
 import { DateTime } from "luxon";
-import styled from 'styled-components';
 
 import Box from 'components/Box/Box'
 import Heading from 'components/Heading/Heading'
@@ -11,11 +10,16 @@ import Times from 'components/Times/Times'
 const BedTime = ({time, setPage}) => {
     let bedTime = DateTime.fromISO(time).setLocale('pl-PL').setZone('Europe/Warsaw');
     let times = [];
+    let cycles = 0;
     bedTime = bedTime.minus({minutes: 15});
     
     for (let i = 0; i < 6; i++) {
         bedTime = bedTime.minus({minutes: 90});
-        times.push(bedTime.toFormat('HH:mm'));
+        cycles++;
+        times.push({
+            time: bedTime.toFormat('HH:mm'),
+            cycles: cycles,
+        });
     }
 
     times.reverse();

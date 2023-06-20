@@ -44,6 +44,26 @@ const Field = styled.div`
   margin: 20px 0;
 `;
 
+const NewVersionInfo = styled.p`
+  max-width: 400px;
+
+  b {
+    color: rgb(231, 66, 66);
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: ${({theme}) => theme.colors.secondary};
+    border-radius: 5px;
+  }
+`;
+
 const Home = ({setPage, setTime}) => {
   const [bedTime, setBedTime] = React.useState('');
   const [errorMessage, setErrorMessage] = React.useState('');
@@ -72,6 +92,8 @@ const Home = ({setPage, setTime}) => {
 
         <Button onclick={submit}>O której godzinie muszę iść spać?</Button>
         <ErrorWrapper>{errorMessage}</ErrorWrapper>
+
+        <NewVersionInfo><b>Uwaga!</b> Używasz starej wersji aplikacji!<br/> <a href='https://sen.revku.dev/'>Sprawdź nową wersję</a></NewVersionInfo>
       </Box>
       <Paragraph>Chcesz zasnąć teraz?</Paragraph>
       <Button onclick={() => setPage('wakeUpTime')}>O której godzinie muszę wstać?</Button>
